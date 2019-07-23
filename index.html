@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="jumbotron">
+            <h1 class="display-4 text-center">Hangman</h1>
+            <p class="lead text-center">This is a simple game of word guess. Try to guess the letters before you get hanged.</p>
+            <hr class="my-4">
+            <p class="lead text-center">Let's begin by picking a new word.</p>
+            <div class="container d-flex justify-content-center">
+                <button onclick="displayWord()" class="btn btn-primary btn-lg" href="#" role="button">New Word</button>
+            </div>
+
+            
+    </div>
+        <p class="lead scoreboard">Wins: <span class="wins">0</span></p>
+        <p class="lead scoreboard">Losses:<span class="losses">0</span></p>
+        <p class="lead scoreboard">Incorrect Guess:<span class="incorrect-guesses"></span></p>
+        <br><br>
+        <h1 class="lead scoreboard">Correct Guesses: <span class="correct-guesses"></span></h1>
+
+    <script src="./game.js"></script>
+</body>
+</html>
