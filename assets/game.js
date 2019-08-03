@@ -33,16 +33,17 @@ generateWord();
 function createBlanks(){
     for(var i = 0; i < computerWord.length; i++){
     underscoreArray[i] = '_';
-    }
     correctGuessesDOM.textContent = underscoreArray.join(' ')
+    }
 }
 createBlanks();
 
 // create event listener
 document.onkeyup = function(event) {
+
     // set parameters for event listener
     if(event.keyCode > 64 && event.keyCode < 91){
-        userGuess = event.key 
+        userGuess = event.key.toLowerCase();
         // alerts user that they did not press a key 'a-z'
     } else {
         alert("Please press a key from 'a-z'.")
@@ -71,6 +72,7 @@ document.onkeyup = function(event) {
     correctGuessesDOM.textContent = underscoreArray.join(' ')
     winsDOM.textContent = wins;
 }
+
 function checkWin(){
     var winWord = underscoreArray.join('')
     if(wordChoices.includes(winWord)){
@@ -81,8 +83,11 @@ function checkWin(){
 
 // Press button, new word gets generated
 function displayWord() {
+    incorrectGuessArr = []
     incorrectGuessesDOM.textContent = ' '
     correctGuessesDOM.textContent = ' '
+    correctGuessArr = []
+    underscoreArray = []
     generateWord();
     createBlanks();
     alert('You generated a new word!');
